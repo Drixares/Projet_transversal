@@ -14,12 +14,16 @@
   --colors-text-sous-texte-2: var(--colors-900);
 
   /* A mettre en responsive */
-  --title-h1-size: 70px;
-  --title-h2-size: 55px;
-  --title-h3-size: 40px;
+  --title-h1-size: clamp(1.8rem, 4vw, 4rem);
+  --title-h2-size: clamp(1.5rem, 3vw, 3rem);
+  --title-h3-size: clamp(1.3rem, 2vw, 2.5rem);
+  --texte-size: clamp(.8rem, 2vw, 1.2rem);;
   --section-margin-bottom: 300px;
 }
 
+p {
+  font-size: var(--texte-size);
+}
 
 .hero {
   display: flex;
@@ -38,6 +42,7 @@
   text-align: center;
   gap: 25px;
   max-width: 1100px;
+  margin-inline: 3vw;
 }
 
 .hero__accrocheBox__title {
@@ -67,7 +72,7 @@
   border-radius: 5px;
   border: none;
   outline: none;
-  font-size: 20px;
+  font-size: var(--texte-size);
   text-decoration: none;
   transition: background-color 0.3s;
 }
@@ -78,15 +83,18 @@
 
 .hero__videoBox,
 .gameBox__videoBox {
+  width: 90vw;
+  min-width: 300px;
   max-width: 900px;
-  height: 460px;
+  aspect-ratio: 16/9;
+  margin-inline: 3vw;
 }
 
 .hero__videoBox > video,
 .gameBox__videoBox > video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .aboutBox {
@@ -100,17 +108,25 @@
 
 .aboutBox__aboutContainer {
   display: flex;
-  gap: min(200px);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-inline: 3vw;
+  width: 60vw;
+  max-width: 1500px;
+  gap: 25px;
+  /* background-color: lightcoral; */
 }
 
 .aboutBox__aboutContainer__title,
 .teamBox__teamContainer__title {
   font-size: var(--title-h2-size);
   font-family: 'Arcane Nine Regular', sans-serif;
+  min-width: auto;
+  /* background-color: lightblue; */
 }
 
 .aboutBox__aboutContainer__textBox {
-  max-width: 640px;
+  max-width: 700px;
 }
 
 .aboutBox__aboutContainer__textBox > * + * {
@@ -122,6 +138,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-inline: 3vw;
   margin-bottom: var(--section-margin-bottom);
 }
 
@@ -131,8 +148,9 @@
   background-color: var(--colors-background-low);
   border: 1px solid var(--colors-stroke);
   border-radius: 30px;
-  width: 930px;
-  padding: 30px 40px;
+  max-width: 930px;
+  width: 90vw;
+  padding: 30px max(2.5vw, 15px);
   height: auto;
 }
 
@@ -178,7 +196,7 @@
 }
 
 .fa-check {
-  font-size: 1.4rem;
+  font-size: var(--texte-size);
 }
 
 .eventBtn {
@@ -223,7 +241,9 @@
 }
 
 .teamBox__teamContainer {
-  max-width: 1100px;
+  width: 60vw;
+  max-width: 1500px;
+  margin-inline: 3vw;
 }
 
 .teamBox__teamContainer > * + * {
@@ -232,9 +252,9 @@
 
 .teamBox__teamContainer__memberBox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: calc(20px  + .7vw);
+  gap: min(3vw, 20px);
 }
 
 .teamBox__teamContainer__memberBox__memberCard {
@@ -244,13 +264,18 @@
   justify-content: start;
   gap: 10px;
   text-align: center;
-  width: 150px;
-  height: 250px;
+  max-width: 150px;
+  min-width: 150px;
+  height: 240px;
+  padding: 7px;
+  border: 1px solid rgb(176, 176, 176);
 }
 
 .teamBox__teamContainer__memberBox__memberCard__imgBox {
-  width: 140px;
-  height: 140px;
+  min-width: 60px;
+  max-width: 140px;
+  aspect-ratio: 1;
+  width: calc(60px + 4vw); ;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -270,3 +295,21 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 1200px) {
+  .aboutBox__aboutContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .teamBox__teamContainer {
+    width: 100%;
+  }
+
+  .teamBox__teamContainer__memberBox__memberCard {
+    flex: 1;
+  }
+
+  .hero__accrocheBox__title {
+    line-height: 2.5rem;
+  }
+}

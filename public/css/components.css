@@ -11,6 +11,8 @@ html,
   font-family: 'Satoshi-Medium', sans-serif;
   scroll-behavior: smooth;
   background-color: var(--colors-background-basic);
+  width: 100lvw;
+  overflow-x: clip;
 }
 
 button.ctaBtn {
@@ -45,19 +47,25 @@ button.ctaBtn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: max(2vw, 20px);
 }
 
 .navigationBox__menuBox {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
+  justify-content: flex-start;
+  gap: 1.8vw;
   width: 200px;
 }
 
+.navigationBox__menuBox:nth-child(1) {
+  justify-content: flex-end;
+}
+
+
 .navigationBox__menuBox__logoBox {
-  height: 100px;
+  height: calc(50px + 2vw);
+  max-height: 100px;
 }
 
 .navigationBox__menuBox__logoBox > img {
@@ -77,7 +85,7 @@ footer {
   height: 230px;
   background-color: var(--colors-background-low);
   border-top: 1px solid var(--colors-stroke);
-  padding-inline: 228px;
+  padding-inline: max(8vw, 40px);
 }
 
 .footerContainer {
@@ -94,12 +102,27 @@ footer {
 }
 
 .mousquetairesLogo {
-  height: 20px;
+  height: max(2vw, 10px);
+  max-height: 30px;
+}
+
+.paris2024Logo {
+  height: max(5vw, 50px);
+  max-height: 100px;
+
 }
 
 .footerContainer__logoBox {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: max(2vw, 30px);
+}
+
+@media (max-width: 450px) {
+  
+  .footerContainer__logoBox {
+    flex-direction: column;
+  }
+  
 }
 
