@@ -1,0 +1,364 @@
+:root {
+  /* Light */
+  /* colors */
+  --colors-stroke: var(--colors-900);
+  --colors-background-basic: var(--colors-white);
+  --colors-background-low: var(--colors-50);
+  --colors-button-cta-active: var(--colors-700);
+  --colors-button-cta-default: var(--colors-500);
+  --colors-button-cta-hover: var(--colors-600);
+  --colors-button-cta-text: var(--colors-50);
+  --colors-text-basic: var(--colors-black);
+  --colors-text-important: var(--colors-500);
+  --colors-text-sous-texte: var(--colors-950);
+  --colors-text-sous-texte-2: var(--colors-900);
+
+  /* A mettre en responsive */
+  --title-h1-size: 70px;
+  --title-h2-size: 55px;
+  --title-h3-size: 40px;
+  --section-margin-bottom: 200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button.ctaBtn {
+  cursor: pointer;
+}
+
+html,
+.wrapper {
+  font-family: 'Satoshi-Medium', sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--colors-background-basic);
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 160px;
+}
+
+.navigationBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.navigationBox__menuBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navigationBox__menuBox__logoBox {
+  height: 100px;
+}
+
+.navigationBox__menuBox__logoBox > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  margin-bottom: var(--section-margin-bottom);
+}
+
+.hero__accrocheBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+  max-width: 1100px;
+}
+
+.hero__accrocheBox__title {
+  font-family: 'Satoshi-Light', sans-serif;
+  font-size: var(--title-h1-size);
+  line-height: 5rem;
+}
+
+.arcaneText {
+  color: var(--colors-text-important);
+  font-family: 'Arcane Nine Regular', sans-serif;
+}
+
+.hero__accrocheBox__textAndCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  max-width: 700px;
+}
+
+.ctaBtn {
+  background-color: var(--colors-button-cta-default);
+  color: var(--colors-button-cta-text);
+  padding: 8px 24px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.ctaBtn:hover {
+  background-color: var(--colors-button-cta-hover);
+}
+
+.hero__videoBox,
+.gameBox__videoBox {
+  max-width: 900px;
+  height: 460px;
+}
+
+.hero__videoBox > video,
+.gameBox__videoBox > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 100px;
+  background-color: var(--colors-background-low);
+  margin-bottom: var(--section-margin-bottom);
+}
+
+.aboutBox__aboutContainer {
+  display: flex;
+  gap: min(200px);
+}
+
+.aboutBox__aboutContainer__title,
+.teamBox__teamContainer__title {
+  font-size: var(--title-h2-size);
+  font-family: 'Arcane Nine Regular', sans-serif;
+}
+
+.aboutBox__aboutContainer__textBox {
+  max-width: 640px;
+}
+
+.aboutBox__aboutContainer__textBox > * + * {
+  margin-top: 25px;
+}
+
+
+.eventBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--section-margin-bottom);
+}
+
+.eventBox__eventCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colors-background-low);
+  border: 1px solid var(--colors-stroke);
+  border-radius: 30px;
+  width: 930px;
+  padding: 30px 40px;
+  height: auto;
+}
+
+.eventBox__eventCard__title {
+  font-size: var(--title-h3-size);
+}
+.eventBox__eventCard__infosBox__textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  color: var(--colors-text-sous-texte);
+}
+
+.eventBox__eventCard__infosBox__textBox > p  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.eventBox__eventCard__infosBox__textBox >  * + * {
+  margin-top: 10px;
+}
+
+.eventBox__eventCard__infosBox {
+  margin-top: 20px;
+}
+
+.eventBox__eventCard__actionBox {
+  margin-top: 40px;
+  max-width: 400px;
+}
+
+.eventBox__eventCard__actionBox__date {
+  color: var(--colors-text-sous-texte-2);
+}
+
+.fa-check,
+.darkText {
+  font-weight: bold;
+}
+
+.fa-check {
+  font-size: 1.4rem;
+}
+
+.eventBtn {
+  width: 100%;
+}
+
+.gameBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--section-margin-bottom);
+}
+
+.gameBox__gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.gameBox__gameContainer__accrocheBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  text-align: center;
+}
+
+.gameBox__gameContainer__accrocheBox__title {
+  font-family: 'Satoshi-Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: var(--title-h2-size);
+}
+
+.teamBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--section-margin-bottom);
+}
+
+.teamBox__teamContainer {
+  max-width: 1100px;
+}
+
+.teamBox__teamContainer > * + * {
+  margin-top: 25px;
+}
+
+.teamBox__teamContainer__memberBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(20px  + .7vw);
+}
+
+.teamBox__teamContainer__memberBox__memberCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  text-align: center;
+  width: 150px;
+  height: 250px;
+}
+
+.teamBox__teamContainer__memberBox__memberCard__imgBox {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.teamBox__teamContainer__memberBox__memberCard__imgBox > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamBox__teamContainer__memberBox__memberCard__infos__name {
+  color: var(--colors-text-sous-texte);
+}
+
+.teamBox__teamContainer__memberBox__memberCard__infos__axe {
+  color: var(--colors-text-sous-texte-2);
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+  background-color: var(--colors-background-low);
+  border-top: 1px solid var(--colors-stroke);
+  padding-inline: 228px;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footerContainer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mousquetairesLogo {
+  height: 20px;
+}
+
+.footerContainer__logoBox {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: var(--colors-text-basic);
+}
+
+.menuLink:hover {
+  color: var(--colors-text-sous-texte-2);
+}
+
+.menuLink.active {
+  color: var(--colors-text-sous-texte-2);
+}
