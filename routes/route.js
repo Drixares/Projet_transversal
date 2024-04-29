@@ -3,7 +3,11 @@ import UsersController from '../controllers/UsersController.js';
 
 const router = express.Router();  
 
-router.get('/api/users', UsersController.index)
-router.get('/api/users/:id', UsersController.show)
+router.route('/data/game')
+  .get(UsersController.getStats)
+  .post(UsersController.create)
+
+router.get('/data/game/:id', UsersController.showUser)
+router.get('/data/users/', UsersController.index)
 
 export default router;

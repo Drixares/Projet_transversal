@@ -17,11 +17,12 @@
   --title-h1-size: clamp(1.8rem, 4vw, 4rem);
   --title-h2-size: clamp(1.5rem, 3vw, 3rem);
   --title-h3-size: clamp(1.3rem, 2vw, 2.5rem);
-  --texte-size: clamp(.8rem, 2vw, 1.2rem);;
+  --texte-size: clamp(.8rem, 2vw, 1.2rem);
+  --texte-card-size: clamp(.8rem, 1.5vw, 1rem);
   --section-margin-bottom: 300px;
 }
 
-p {
+p:not(.teamBox__teamContainer__memberBox__memberCard__infos__axe) {
   font-size: var(--texte-size);
 }
 
@@ -269,15 +270,17 @@ p {
   height: 240px;
   padding: 7px;
   border: 1px solid rgb(176, 176, 176);
+  border-radius: 5px;
+  font-size: var(--texte-card-size);
 }
 
 .teamBox__teamContainer__memberBox__memberCard__imgBox {
   min-width: 60px;
   max-width: 140px;
-  aspect-ratio: 1;
   width: calc(60px + 4vw); ;
   border-radius: 100%;
   overflow: hidden;
+  aspect-ratio: 1;
 }
 
 .teamBox__teamContainer__memberBox__memberCard__imgBox > img {
