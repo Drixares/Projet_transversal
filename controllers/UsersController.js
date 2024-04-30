@@ -7,7 +7,12 @@ class UserController {
 
     try {
       
-      const user = await client.user.findMany()
+      const user = await client.user.findMany({
+        take: 5,
+        orderBy: {
+          id: "desc"
+        }
+      })
 
       if (!user.length) return res.status(404).json("Aucun utilisateur trouvé")
 

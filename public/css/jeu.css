@@ -1,0 +1,160 @@
+:root {
+  /* Light */
+  /* colors */
+  --colors-stroke: var(--colors-900);
+  --colors-background-basic: var(--colors-white);
+  --colors-background-low: var(--colors-50);
+  --colors-button-cta-active: var(--colors-700);
+  --colors-button-cta-default: var(--colors-500);
+  --colors-button-cta-hover: var(--colors-600);
+  --colors-button-cta-text: var(--colors-50);
+  --colors-text-basic: var(--colors-black);
+  --colors-text-important: var(--colors-500);
+  --colors-text-sous-texte: var(--colors-950);
+  --colors-text-sous-texte-2: var(--colors-900);
+
+  /* A mettre en responsive */
+  --title-h1-size: clamp(1.8rem, 4vw, 4rem);
+  --title-h2-size: clamp(1.5rem, 3vw, 3rem);
+  --title-h3-size: clamp(1.3rem, 2vw, 2.5rem);
+  --texte-size: clamp(.8rem, 2vw, 1.2rem);
+  --texte-card-size: clamp(.8rem, 1.5vw, 1rem);
+  --section-margin-bottom: 300px;
+}
+
+main {
+  padding-inline: 8vw;
+  margin-bottom: var(--section-margin-bottom);
+}
+
+.statsBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: var(--section-margin-bottom);
+}
+
+.statsBox__statsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  /* height: auto; */
+  width: 100%;
+}
+
+.statsBox__statsContainer__boxInfos {
+  width: 50vw;
+  min-width: 300px;
+  max-width: 720px;
+}
+
+.statsBox__statsContainer__boxInfos__title,
+.lastGamesBox__lastGamesContainer__title {
+  font-size: var(--title-h2-size);
+  font-family: 'Arcane Nine Regular', sans-serif;
+}
+
+.statsBox__statsContainer__schemaBox {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 30px;
+  /* background-color: lightblue; */
+}
+
+.bar-fin1 {
+  --delay: 0s
+}
+
+.bar-fin2 {
+  --delay: .2s
+}
+
+.bar {
+  background-color: var(--colors-button-cta-default);
+  width: 10vw;
+  max-width: 200px;
+  min-width: 100px;
+  height: 0;
+  animation: barsAnimation .5s var(--delay) forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--texte-size) + 4px);
+}
+
+@keyframes barsAnimation {
+  to {
+    height: var(--height);
+  }
+}
+
+.statsBox__statsContainer__schemaBox__fin1Box,
+.statsBox__statsContainer__schemaBox__fin2Box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  height: 290px;
+}
+
+.statsBox__statsContainer__schemaBox__fin1Box > span,
+.statsBox__statsContainer__schemaBox__fin2Box > span {
+  font-weight: 700;
+  font-size: var(--texte-size);
+}
+
+.lastGamesBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lastGamesBox__lastGamesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 70vw;
+  min-width: 300px;
+  max-width: 1000px;
+}
+
+.lastGamesBox__lastGamesContainer__list {
+  width: 100%;
+}
+
+.lastGamesBox__lastGamesContainer__list > * + * {
+  margin-top: 10px;
+}
+
+.lastGamesBox__lastGamesContainer__list__test {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  width: 100%;
+}
+
+.lastGamesBox__lastGamesContainer__list__test > span {
+  font-weight: 600;
+}
+
+.lastGamesBox__lastGamesContainer__list__element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  background-color: var(--colors-100);
+  border: 1px solid var(--colors-300);
+  border-radius: 10px;
+  width: 100%;
+  height: calc(50px + 2vw);
+  max-height: 75px;
+}

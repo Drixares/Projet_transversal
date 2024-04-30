@@ -16,9 +16,11 @@
   --color-stroke-card: #DBDBDB;
 
   /* A mettre en responsive */
-  --title-h1-size: 70px;
-  --title-h2-size: 55px;
-  --title-h3-size: 40px;
+  --title-h1-size: clamp(1.8rem, 4vw, 4rem);
+  --title-h2-size: clamp(1.5rem, 3vw, 3rem);
+  --title-h3-size: clamp(1.3rem, 2vw, 2.5rem);
+  --texte-size: clamp(.8rem, 2vw, 1.2rem);
+  --texte-card-size: clamp(.8rem, 1.5vw, 1rem);
   --section-margin-bottom: 300px;
 }
 

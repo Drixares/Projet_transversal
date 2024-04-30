@@ -6,6 +6,7 @@
   <script src="https://kit.fontawesome.com/d3a9f97c9c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/jeu.css">
   <title>Jeu - Mousquetaires</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <section class="topNav">
       <nav class="navigationBox">
         <div class="navigationBox__menuBox">
-          <a href="index.html" class="menuLink navigationBox__menuBox__menuLink active">Home</a>
+          <a href="index.html" class="menuLink navigationBox__menuBox__menuLink">Home</a>
           <a href="news.html" class="menuLink navigationBox__menuBox__menuLink">News</a>
         </div>
         <a href="/" class="navigationBox__menuBox__logoBox">
@@ -21,10 +22,65 @@
         </a>
         <div class="navigationBox__menuBox">
           <a href="promotion.html" class="menuLink navigationBox__menuBox__menuLink">Promotion</a>
-          <a href="jeu.html" class="menuLink navigationBox__menuBox__menuLink">Jeu</a>
+          <a href="jeu.html" class="menuLink navigationBox__menuBox__menuLink active">Jeu</a>
         </div>
       </nav>
     </section>
+
+    <main>
+      <section class="statsBox">
+      <div class="statsBox__statsContainer">
+        <div class="statsBox__statsContainer__boxInfos">
+          <h1 class="statsBox__statsContainer__boxInfos__title">Page data</h1>
+          <p>
+            Cette page est dédiée aux données du jeu que l’on a créé. <br> Une partie peut finir de 2 manières possibles, 
+            les données ci-après correspondent au pourcentage obtenu de chaque fin sur toutes les parties qui on été jouées.
+          </p>
+        </div>
+        <div class="statsBox__statsContainer__schemaBox">
+          <div class="statsBox__statsContainer__schemaBox__fin1Box">
+            <div class="bar bar-fin1"></div>
+            <span>Fin 1</span>
+          </div>
+          <div class="statsBox__statsContainer__schemaBox__fin2Box">
+            <div class="bar bar-fin2"></div>
+            <span>Fin 2</span>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="lastGamesBox">
+        <div class="lastGamesBox__lastGamesContainer">
+          <h2 class="lastGamesBox__lastGamesContainer__title">5 dernières parties</h2>
+          <div class="lastGamesBox__lastGamesContainer__list">
+
+            <div class="lastGamesBox__lastGamesContainer__list__test">
+              <span class="lastGamesBox__lastGamesContainer__list__element__name">Pseudo</span>
+              <span class="lastGamesBox__lastGamesContainer__list__element__fin">Choix</span>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footerContainer">
+        <nav class="footerContainer__nav">
+          <a href="/" class="menuLink">Home</a>
+          <a href="news.html" class="menuLink">News</a>
+          <a href="promotion.html" class="menuLink">Promotion</a>
+          <a href="jeu.html" class="menuLink">Jeu</a>
+        </nav>
+      </div>
+      <div class="footerContainer__logoBox">
+        <img class="mousquetairesLogo" src="./ressources/mousquetaires.png" alt="Mousquetaires logo">
+        <img src="./ressources/LOGO.svg" alt="Paris 2024 logo">
+      </div>
+    </footer>
+
   </div>
 
   <script src="./js/fetchStats.js"></script>
